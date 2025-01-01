@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="mainDiv">
+      <h2>Do you like me ?</h2>
+      <button id="yesButton"><span id="spanYes">Yes</span>
+        <div id="iki">
+            I knew it
+          </div>
+      </button>
+      
+      <button id="noButton" onmouseleave="transformOut()" onmouseover="transform()" onclick="transform()" onmouseenter="transform()"><span onmouseover="transform()" onclick="transform()" onmouseenter="transform()" id="spanNo">No</span></button>
+    </div>
+
+    <span id="cp">&copy Reserved to Nagaraj Golai</span>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+
+        function transform(){
+            let x = Math.random() * 200 - 100;
+            let y = Math.random() * 100;
+            noButton.style.transform = `translate(${x}px, ${y}px)`;
+            noButton.style.scale = '0.5'
+        }
+
+        function transformOut(){
+            noButton.style.scale = '1'
+        }
+        
+    </script>
+  </body>
+</html>
